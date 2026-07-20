@@ -18,7 +18,7 @@
   html,body{background:var(--bg);color:var(--ink);
     font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
     line-height:1.55;-webkit-font-smoothing:antialiased}
-  body{max-width:480px;margin:0 auto;overflow-x:hidden;padding-bottom:92px}
+  body{max-width:480px;margin:0 auto;overflow-x:hidden;padding-bottom:calc(130px + env(safe-area-inset-bottom))}
   img{max-width:100%;display:block}
   svg{display:block}
   section{padding:20px}
@@ -129,7 +129,7 @@
 
   /* ===== CTA 固定底栏 ===== */
   .cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;
-    background:rgba(251,246,240,.94);backdrop-filter:blur(8px);padding:11px 16px;
+    background:rgba(251,246,240,.94);backdrop-filter:blur(8px);padding:11px 16px calc(11px + env(safe-area-inset-bottom));
     box-shadow:0 -4px 18px rgba(0,0,0,.05);display:flex;gap:10px;z-index:20}
   .cta a{flex:1;text-align:center;padding:13px;border-radius:12px;font-weight:700;font-size:15px;
     text-decoration:none}
